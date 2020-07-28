@@ -1,0 +1,24 @@
+﻿<Window x:Class="xmlParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xmlParser"
+        mc:Ignorable="d"
+        Title="InvoiceParser1.1" Height="253.332" Width="469.334">
+    <Grid>
+        <Button x:Name="btn_choose_xml" Content="Načíst XML soubory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="143" Height="35" Click="Btn_choose_xml_Click"/>
+        <Button x:Name="btn_load_data" Content="Export do CSV" Margin="158,10,0,0" VerticalAlignment="Top" Height="35" Click="Btn_load_data_Click" HorizontalAlignment="Left" Width="119"/>
+        <Label Content="Počet nahraných zákazníků :" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="25" Width="158"/>
+        <Label Content="Uloženo do:" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="l_file_path" Content="" Margin="0,53,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="325"/>
+        <Label x:Name="l_subs_count" Content="0" HorizontalAlignment="Left" Margin="173,84,0,0" VerticalAlignment="Top" Width="50"/>
+        <CheckBox x:Name="cb_multi_month" Content="Hledat podsložky (více období)" HorizontalAlignment="Left" Margin="12,114,0,0" VerticalAlignment="Top" Width="198" IsChecked="True" Click="Cb_multi_month_Click"/>
+        <Button x:Name="btn_delete_data" Content="Vymazat nahraná data" Margin="282,10,10,0" VerticalAlignment="Top" Height="35" Click="Btn_delete_data_Click"/>
+        <CheckBox x:Name="cb_from_last_inv" Content="Začít od naposledy načtené složky" HorizontalAlignment="Left" Margin="12,134,0,0" VerticalAlignment="Top" Width="238" Click="Cb_from_last_inv_Click"/>
+        <Label x:Name="l_info_lns" Content="Poslední načtená složka:" Margin="12,154,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162"/>
+        <Label x:Name="l_last_invoice" Content="" Margin="179,154,10,0" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="pb_progress" Height="24" VerticalAlignment="Bottom"/>
+        <Label x:Name="l_progress_text" Content="" Margin="201,0,155,0" Height="25" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
